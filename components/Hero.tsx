@@ -9,7 +9,7 @@ export interface HeroStat {
 }
 
 export const STATS: HeroStat[] = [
-  { label: "Transactions Sponsored", value: "12,400+", unit: "txns" },
+  { label: "Transactions Sponsored", value: "20+", unit: "txns" },
   { label: "Uptime", value: "99.99", unit: "%" },
   { label: "Settlement Latency", value: "~2.4", unit: "s" },
 ];

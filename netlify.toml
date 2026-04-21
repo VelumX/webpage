@@ -1,0 +1,22 @@
+# Netlify configuration for VelumX Landing Page (standalone)
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_USE_LIBUV = "1"
+  NODE_VERSION = "20"
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors 'self' https://velumx.xyz https://*.velumx.xyz;"
+    Access-Control-Allow-Origin = "*"

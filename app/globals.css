@@ -12,7 +12,7 @@
   --color-purple-light: #8B5CF6;
   --color-purple-glow: rgba(124, 58, 237, 0.3);
 
-  /* Keep blue-neon for alternating accents but softer */
+  /* Blue accent for alternating features */
   --color-blue-neon: #2563EB;
 
   --font-bungee: var(--font-bungee), cursive;
@@ -24,12 +24,21 @@
 
 @layer base {
   * {
-    @apply border-black/5;
+    border-color: rgba(0, 0, 0, 0.05);
     cursor: default;
   }
 
   body {
-    @apply bg-bg-primary text-text-primary font-inter antialiased overflow-x-hidden selection:bg-purple/20;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(124, 58, 237, 0.2);
   }
 
   a,
@@ -40,63 +49,103 @@
 
 @layer components {
   .hero-headline {
-    @apply font-bungee text-[clamp(2.5rem,10vw,8rem)] leading-[0.85] tracking-[-0.08em] uppercase;
+    font-family: var(--font-bungee), cursive;
+    font-size: clamp(2.5rem, 10vw, 8rem);
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
   }
 
   .neon-text-purple {
-    @apply text-purple drop-shadow-[0_0_24px_rgba(124,58,237,0.35)];
+    color: var(--color-purple);
+    filter: drop-shadow(0 0 24px rgba(124, 58, 237, 0.35));
   }
 
-  /* Alias for legacy neon-text-magenta references */
+  /* Alias for any legacy neon-text-magenta references */
   .neon-text-magenta {
-    @apply neon-text-purple;
+    color: var(--color-purple);
+    filter: drop-shadow(0 0 24px rgba(124, 58, 237, 0.35));
   }
 
   .elite-card {
-    @apply bg-white border border-black/[0.06] rounded-elite relative overflow-hidden transition-all duration-500;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.04);
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-elite);
+    position: relative;
+    overflow: hidden;
+    transition: all 500ms;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
   }
 
   .elite-card:hover {
-    @apply border-purple/20 -translate-y-1;
-    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.10), 0 2px 8px rgba(0,0,0,0.06);
+    border-color: rgba(124, 58, 237, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.10), 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .hud-badge {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-black/[0.07] shadow-sm;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   }
 
   /* Traffic Light Simulation */
   .system-dot {
-    @apply w-2 h-2 rounded-full;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
   }
-  .dot-red {
-    @apply bg-[#FF5F56];
-  }
-  .dot-yellow {
-    @apply bg-[#FFBD2E];
-  }
+  .dot-red  { background-color: #FF5F56; }
+  .dot-yellow { background-color: #FFBD2E; }
   .dot-green {
-    @apply bg-[#27C93F] shadow-[0_0_8px_rgba(39,201,63,0.5)];
+    background-color: #27C93F;
+    box-shadow: 0 0 8px rgba(39, 201, 63, 0.5);
   }
 
   .mesh-glow {
-    @apply absolute inset-0 pointer-events-none z-0 opacity-30;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
     background:
       radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.08) 0%, transparent 55%),
       radial-gradient(circle at 90% 90%, rgba(37, 99, 235, 0.06) 0%, transparent 55%);
   }
 
   .btn-elite {
-    @apply relative px-10 py-5 rounded-full font-bold text-sm uppercase tracking-[0.2em] transition-all active:scale-95;
+    position: relative;
+    padding: 1.25rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: all 200ms;
   }
+
+  .btn-elite:active { transform: scale(0.95); }
 
   .btn-primary {
-    @apply bg-purple text-white hover:bg-purple-light shadow-[0_4px_20px_rgba(124,58,237,0.3)];
+    background-color: var(--color-purple);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
   }
+  .btn-primary:hover { background-color: var(--color-purple-light); }
 
   .btn-secondary {
-    @apply border border-black/10 text-text-primary bg-white hover:bg-black/[0.03] hover:border-black/20;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--color-text-primary);
+    background-color: #ffffff;
+  }
+  .btn-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.2);
   }
 
   /* Mobile menu overlay */
@@ -104,22 +153,14 @@
     transform: translateX(100%);
     transition: transform 300ms ease-in-out;
   }
-
   .mobile-menu.open {
     transform: translateX(0);
   }
 }
 
 @keyframes pulse-dot {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.9);
-  }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.9); }
 }
 
 .animate-pulse-dot {
@@ -127,18 +168,9 @@
 }
 
 @keyframes scroll-label {
-  0% {
-    transform: translateY(0);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(10px);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.4;
-  }
+  0%   { transform: translateY(0);    opacity: 0.4; }
+  50%  { transform: translateY(10px); opacity: 0.8; }
+  100% { transform: translateY(0);    opacity: 0.4; }
 }
 
 .animate-scroll {

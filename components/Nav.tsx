@@ -58,7 +58,7 @@ export default function Nav() {
                 alt="VelumX Icon"
                 width={36}
                 height={36}
-                className="object-contain filter drop-shadow-[0_0_8px_rgba(233,30,99,0.3)] transition-transform group-hover:scale-110"
+                className="object-contain filter drop-shadow-[0_0_8px_rgba(124,58,237,0.3)] transition-transform group-hover:scale-110"
                 style={{ height: "auto" }}
               />
             </div>

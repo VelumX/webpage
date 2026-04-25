@@ -44,10 +44,10 @@ export default function FAQ() {
   };
 
   return (
-    <section className="px-8 py-32 border-t border-white/[0.03] max-w-[1400px] mx-auto w-full">
+    <section className="px-8 py-32 border-t border-black/[0.05] max-w-[1400px] mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-20 space-y-4">
-        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter">
+        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter text-text-primary">
           Frequently Asked Questions
         </h2>
         <p className="text-text-secondary text-lg max-w-xl mx-auto">
@@ -71,12 +71,12 @@ export default function FAQ() {
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${index}`}
               >
-                <span className="font-bold text-base text-white/90 leading-snug">
+                <span className="font-bold text-base text-text-primary leading-snug">
                   {item.question}
                 </span>
                 <ChevronDown
-                  className={`h-5 w-5 text-white/40 flex-shrink-0 transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
+                  className={`h-5 w-5 text-text-secondary flex-shrink-0 transition-transform duration-300 ${
+                    isOpen ? "rotate-180 text-purple" : ""
                   }`}
                   aria-hidden="true"
                 />
@@ -91,7 +91,7 @@ export default function FAQ() {
                 role="region"
                 aria-labelledby={`faq-question-${index}`}
               >
-                <div className="px-8 pb-6 text-sm text-text-secondary leading-relaxed font-light border-t border-white/[0.05] pt-4">
+                <div className="px-8 pb-6 text-sm text-text-secondary leading-relaxed font-light border-t border-black/[0.05] pt-4">
                   {item.answer}
                 </div>
               </div>

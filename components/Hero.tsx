@@ -22,10 +22,10 @@ export default function Hero() {
 
       {/* Animated grid overlay */}
       <div
-        className="absolute inset-0 pointer-events-none z-0 opacity-[0.03]"
+        className="absolute inset-0 pointer-events-none z-0 opacity-[0.025]"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 80px), repeating-linear-gradient(90deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 80px)",
+            "repeating-linear-gradient(0deg, rgba(0,0,0,0.5) 0px, rgba(0,0,0,0.5) 1px, transparent 1px, transparent 80px), repeating-linear-gradient(90deg, rgba(0,0,0,0.5) 0px, rgba(0,0,0,0.5) 1px, transparent 1px, transparent 80px)",
         }}
       />
 

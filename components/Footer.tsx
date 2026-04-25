@@ -80,7 +80,7 @@ function isExternal(href: string) {
 
 export default function Footer() {
   return (
-    <footer className="px-8 py-24 border-t border-white/[0.03] relative z-10">
+    <footer className="px-8 py-24 border-t border-black/[0.05] relative z-10 bg-white">
       <div className="max-w-[1400px] mx-auto">
         {/* Main grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-20">
@@ -94,7 +94,7 @@ export default function Footer() {
               className="object-contain opacity-80"
               style={{ height: "auto" }}
             />
-            <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/30 leading-relaxed">
+            <p className="text-[10px] uppercase font-bold tracking-[0.4em] text-text-secondary leading-relaxed">
               The settlement protocol
               <br />
               for gas-free liquidity
@@ -106,7 +106,7 @@ export default function Footer() {
           {/* Link columns */}
           {COLUMNS.map((col) => (
             <div key={col.heading} className="space-y-6">
-              <h5 className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">
+              <h5 className="text-[10px] font-bold uppercase tracking-[0.4em] text-text-primary">
                 {col.heading}
               </h5>
               <ul className="space-y-4">
@@ -114,7 +114,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-xs text-text-secondary font-medium uppercase tracking-widest hover:text-white transition-colors duration-200"
+                      className="text-xs text-text-secondary font-medium uppercase tracking-widest hover:text-purple transition-colors duration-200"
                       {...(isExternal(link.href)
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
@@ -129,8 +129,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row items-center justify-between gap-8">
-          <p className="text-[9px] uppercase font-bold tracking-[0.5em] text-white/30">
+        <div className="pt-12 border-t border-black/[0.05] flex flex-col md:flex-row items-center justify-between gap-8">
+          <p className="text-[9px] uppercase font-bold tracking-[0.5em] text-text-secondary">
             © 2025 VelumX Lab // Advanced Infrastructure For Stacks L2
           </p>
 
@@ -138,7 +138,7 @@ export default function Footer() {
             {/* Status indicator */}
             <a
               href="#"
-              className="flex items-center gap-2 text-[9px] uppercase font-bold tracking-[0.4em] text-white/30 hover:text-white transition-colors duration-200"
+              className="flex items-center gap-2 text-[9px] uppercase font-bold tracking-[0.4em] text-text-secondary hover:text-purple transition-colors duration-200"
             >
               <div className="w-1.5 h-1.5 rounded-full dot-green animate-pulse-dot" />
               Mainnet
@@ -149,7 +149,7 @@ export default function Footer() {
               href="https://github.com/velumX"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/30 hover:text-white transition-colors duration-200"
+              className="text-text-secondary hover:text-purple transition-colors duration-200"
               aria-label="VelumX on GitHub"
             >
               <GithubIcon className="h-4 w-4" />
@@ -159,7 +159,7 @@ export default function Footer() {
               href="https://twitter.com/velumxprotocol"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/30 hover:text-white transition-colors duration-200"
+              className="text-text-secondary hover:text-purple transition-colors duration-200"
               aria-label="VelumX on Twitter/X (@velumxprotocol)"
             >
               <TwitterIcon className="h-4 w-4" />

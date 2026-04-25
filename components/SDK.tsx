@@ -150,10 +150,10 @@ export default function SDK() {
   const lines = CODE_SNIPPET.split("\n");
 
   return (
-    <section className="px-8 py-32 border-t border-white/[0.03] max-w-[1400px] mx-auto w-full">
+    <section className="px-8 py-32 border-t border-black/[0.05] max-w-[1400px] mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-20 space-y-4">
-        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter">
+        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter text-text-primary">
           Build Gasless Apps
         </h2>
         <p className="text-text-secondary text-lg max-w-xl mx-auto">
@@ -166,13 +166,13 @@ export default function SDK() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
         {/* Code Snippet — 60% */}
         <div className="lg:col-span-3">
-          <div className="rounded-2xl overflow-hidden border border-white/[0.05] bg-black/60">
+          <div className="rounded-2xl overflow-hidden border border-black/[0.08] bg-[#1E1E2E]">
             {/* Terminal header */}
-            <div className="flex items-center gap-2 px-5 py-4 border-b border-white/[0.05] bg-white/[0.02]">
+            <div className="flex items-center gap-2 px-5 py-4 border-b border-white/[0.05] bg-white/[0.04]">
               <div className="system-dot dot-red" />
               <div className="system-dot dot-yellow" />
               <div className="system-dot dot-green" />
-              <span className="ml-4 text-[10px] uppercase font-bold tracking-[0.3em] text-white/20">
+              <span className="ml-4 text-[10px] uppercase font-bold tracking-[0.3em] text-white/30">
                 velumx-sdk — example.ts
               </span>
             </div>
@@ -192,11 +192,11 @@ export default function SDK() {
             const Icon = cap.icon;
             return (
               <div key={cap.title} className="flex items-start gap-5">
-                <div className="w-12 h-12 bg-magenta/10 rounded-xl flex items-center justify-center border border-magenta/20 flex-shrink-0">
-                  <Icon className="h-5 w-5 text-magenta" />
+                <div className="w-12 h-12 bg-purple/10 rounded-xl flex items-center justify-center border border-purple/20 flex-shrink-0">
+                  <Icon className="h-5 w-5 text-purple" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-bungee text-lg tracking-tighter">
+                  <h3 className="font-bungee text-lg tracking-tighter text-text-primary">
                     {cap.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed font-light">
@@ -213,7 +213,7 @@ export default function SDK() {
               href="https://docs.velumx.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-black font-bold text-sm uppercase tracking-[0.15em] hover:bg-[#efefef] transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-purple text-white font-bold text-sm uppercase tracking-[0.15em] hover:bg-purple-light transition-all shadow-[0_4px_20px_rgba(124,58,237,0.3)]"
             >
               View SDK Docs
               <ArrowUpRight className="h-4 w-4" />
@@ -223,7 +223,7 @@ export default function SDK() {
               href="https://github.com/velumX"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/10 text-white font-bold text-sm uppercase tracking-[0.15em] hover:bg-white/[0.05] hover:border-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-black/10 text-text-primary font-bold text-sm uppercase tracking-[0.15em] hover:bg-black/[0.03] hover:border-black/20 transition-all"
             >
               <GithubIcon className="h-4 w-4" />
               View on GitHub

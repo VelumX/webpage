@@ -16,12 +16,12 @@ export default function Ecosystem() {
   return (
     <section
       id="ecosystem"
-      className="px-8 py-32 border-t border-white/[0.03] bg-black/40 group"
+      className="px-8 py-32 border-t border-black/[0.05] bg-black/[0.02] group"
     >
       <div className="max-w-[1400px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20 space-y-4">
-          <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter">
+          <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter text-text-primary">
             Ecosystem &amp; Integrations
           </h2>
           <p className="text-text-secondary text-lg max-w-xl mx-auto">
@@ -36,10 +36,10 @@ export default function Ecosystem() {
               key={partner.name}
               className="flex flex-col items-center gap-3"
             >
-              <span className="font-bungee text-2xl tracking-tighter">
+              <span className="font-bungee text-2xl tracking-tighter text-text-primary">
                 {partner.name}
               </span>
-              <span className="text-[8px] uppercase tracking-widest font-bold text-white/40">
+              <span className="text-[8px] uppercase tracking-widest font-bold text-text-secondary">
                 {partner.role}
               </span>
             </div>

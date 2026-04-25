@@ -62,10 +62,10 @@ export const FEATURES: Feature[] = [
 
 export default function Features() {
   return (
-    <section className="px-8 py-32 border-t border-white/[0.03] max-w-[1400px] mx-auto w-full">
+    <section className="px-8 py-32 border-t border-black/[0.05] max-w-[1400px] mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-20 space-y-4">
-        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter">
+        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter text-text-primary">
           Core Capabilities
         </h2>
         <p className="text-text-secondary text-lg max-w-xl mx-auto">
@@ -84,20 +84,20 @@ export default function Features() {
               <div
                 className={`w-14 h-14 rounded-2xl flex items-center justify-center border ${
                   isMagenta
-                    ? "bg-magenta/10 border-magenta/20 shadow-[0_0_20px_rgba(233,30,99,0.1)]"
-                    : "bg-blue-500/10 border-blue-500/20 shadow-[0_0_20px_rgba(0,210,255,0.1)]"
+                    ? "bg-purple/10 border-purple/20 shadow-[0_0_16px_rgba(124,58,237,0.08)]"
+                    : "bg-blue-500/10 border-blue-500/20 shadow-[0_0_16px_rgba(37,99,235,0.08)]"
                 }`}
               >
                 <Icon
                   className={`h-7 w-7 ${
-                    isMagenta ? "text-magenta" : "text-blue-neon"
+                    isMagenta ? "text-purple" : "text-blue-neon"
                   }`}
                 />
               </div>
 
               {/* Content */}
               <div className="space-y-3">
-                <h3 className="font-bungee text-xl tracking-tighter">
+                <h3 className="font-bungee text-xl tracking-tighter text-text-primary">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed font-light">

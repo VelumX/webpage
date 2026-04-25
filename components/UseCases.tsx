@@ -34,10 +34,10 @@ const USE_CASES: UseCase[] = [
 
 export default function UseCases() {
   return (
-    <section className="px-8 py-32 border-t border-white/[0.03] max-w-[1400px] mx-auto w-full">
+    <section className="px-8 py-32 border-t border-black/[0.05] max-w-[1400px] mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-20 space-y-4">
-        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter">
+        <h2 className="font-bungee text-5xl md:text-6xl tracking-tighter text-text-primary">
           Built For Everyone
         </h2>
         <p className="text-text-secondary text-lg max-w-xl mx-auto">
@@ -56,13 +56,13 @@ export default function UseCases() {
               className="elite-card p-8 space-y-6 group flex flex-col"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-magenta/10 rounded-2xl flex items-center justify-center border border-magenta/20 shadow-[0_0_20px_rgba(233,30,99,0.1)]">
-                <Icon className="h-7 w-7 text-magenta" />
+              <div className="w-14 h-14 bg-purple/10 rounded-2xl flex items-center justify-center border border-purple/20 shadow-[0_0_16px_rgba(124,58,237,0.08)]">
+                <Icon className="h-7 w-7 text-purple" />
               </div>
 
               {/* Content */}
               <div className="space-y-3 flex-1">
-                <h3 className="font-bungee text-xl tracking-tighter">
+                <h3 className="font-bungee text-xl tracking-tighter text-text-primary">
                   {useCase.title}
                 </h3>
                 <p className="text-sm text-text-secondary leading-relaxed font-light">
@@ -75,7 +75,7 @@ export default function UseCases() {
                 href={useCase.cta.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-colors duration-200 mt-auto"
+                className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary hover:text-purple transition-colors duration-200 mt-auto"
               >
                 {useCase.cta.label}
                 <ArrowUpRight className="h-3 w-3" />

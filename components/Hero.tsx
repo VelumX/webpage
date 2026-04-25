@@ -78,20 +78,19 @@ export default function Hero() {
                 Developer Portal
               </span>
             </a>
-          </div>
-        </div>
+          </div>        </div>
 
         {/* Stat Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
           {STATS.map((stat) => (
             <div key={stat.label} className="elite-card p-6 text-center space-y-2">
-              <div className="font-bungee text-3xl tracking-tighter text-white">
+              <div className="font-bungee text-3xl tracking-tighter text-text-primary">
                 {stat.value}
                 {stat.unit && (
-                  <span className="text-magenta text-xl ml-1">{stat.unit}</span>
+                  <span className="text-purple text-xl ml-1">{stat.unit}</span>
                 )}
               </div>
-              <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-white/30">
+              <div className="text-[10px] uppercase font-bold tracking-[0.3em] text-text-secondary">
                 {stat.label}
               </div>
             </div>
@@ -100,7 +99,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="mt-24 flex flex-col items-center gap-4 animate-scroll opacity-20 relative z-10">
+      <div className="mt-24 flex flex-col items-center gap-4 animate-scroll opacity-40 relative z-10 text-text-secondary">
         <span className="text-[10px] uppercase font-bold tracking-[0.4em]">
           Scroll to Explore
         </span>

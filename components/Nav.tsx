@@ -45,7 +45,7 @@ export default function Nav() {
       <header
         className={`fixed top-0 w-full z-50 px-8 transition-all duration-500 ${
           scrolled
-            ? "py-4 bg-bg-primary/80 backdrop-blur-2xl border-b border-white/[0.03]"
+            ? "py-4 bg-bg-primary/90 backdrop-blur-2xl border-b border-black/[0.06]"
             : "py-6"
         }`}
       >
@@ -63,10 +63,10 @@ export default function Nav() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-bungee text-2xl leading-none tracking-tighter">
+              <span className="font-bungee text-2xl leading-none tracking-tighter text-text-primary">
                 VelumX
               </span>
-              <span className="text-[9px] uppercase font-bold tracking-[0.4em] text-white/20 mt-1">
+              <span className="text-[9px] uppercase font-bold tracking-[0.4em] text-text-secondary/60 mt-1">
                 Infrastructure
               </span>
             </div>
@@ -74,12 +74,12 @@ export default function Nav() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-12" aria-label="Main navigation">
-            <div className="flex items-center gap-8 text-[10px] uppercase font-bold tracking-[0.25em] text-white/40">
+            <div className="flex items-center gap-8 text-[10px] uppercase font-bold tracking-[0.25em] text-text-secondary">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-text-primary transition-colors duration-200"
                   {...(link.external
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
@@ -93,7 +93,7 @@ export default function Nav() {
               href="https://app.velumx.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full bg-white text-black text-[10px] uppercase font-bold tracking-[0.15em] hover:bg-[#efefef] transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              className="px-6 py-2.5 rounded-full bg-purple text-white text-[10px] uppercase font-bold tracking-[0.15em] hover:bg-purple-light transition-all shadow-[0_4px_16px_rgba(124,58,237,0.25)]"
             >
               Launch App
             </a>
@@ -101,7 +101,7 @@ export default function Nav() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden p-2 text-white/60 hover:text-white transition-colors"
+            className="lg:hidden p-2 text-text-secondary hover:text-text-primary transition-colors"
             onClick={() => setMobileOpen(true)}
             aria-label="Open navigation menu"
             aria-expanded={mobileOpen}
@@ -122,7 +122,7 @@ export default function Nav() {
         aria-label="Navigation menu"
       >
         {/* Overlay Header */}
-        <div className="flex items-center justify-between px-8 py-6 border-b border-white/[0.05]">
+        <div className="flex items-center justify-between px-8 py-6 border-b border-black/[0.06]">
           <a href="/" className="flex items-center gap-4" onClick={() => setMobileOpen(false)}>
             <Image
               src="/velumx-icon.svg"
@@ -131,12 +131,12 @@ export default function Nav() {
               height={36}
               style={{ height: "auto" }}
             />
-            <span className="font-bungee text-2xl leading-none tracking-tighter">
+            <span className="font-bungee text-2xl leading-none tracking-tighter text-text-primary">
               VelumX
             </span>
           </a>
           <button
-            className="p-2 text-white/60 hover:text-white transition-colors"
+            className="p-2 text-text-secondary hover:text-text-primary transition-colors"
             onClick={() => setMobileOpen(false)}
             aria-label="Close navigation menu"
           >
@@ -150,7 +150,7 @@ export default function Nav() {
             <a
               key={link.label}
               href={link.href}
-              className="text-2xl font-bungee tracking-tighter text-white/60 hover:text-white transition-colors py-4 border-b border-white/[0.05]"
+              className="text-2xl font-bungee tracking-tighter text-text-secondary hover:text-text-primary transition-colors py-4 border-b border-black/[0.06]"
               onClick={() => setMobileOpen(false)}
               {...(link.external
                 ? { target: "_blank", rel: "noopener noreferrer" }
@@ -162,12 +162,12 @@ export default function Nav() {
         </nav>
 
         {/* Overlay CTA */}
-        <div className="px-8 py-12 border-t border-white/[0.05]">
+        <div className="px-8 py-12 border-t border-black/[0.06]">
           <a
             href="https://app.velumx.xyz"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center py-5 rounded-full bg-white text-black font-bold text-sm uppercase tracking-[0.2em] hover:bg-[#efefef] transition-all"
+            className="block w-full text-center py-5 rounded-full bg-purple text-white font-bold text-sm uppercase tracking-[0.2em] hover:bg-purple-light transition-all shadow-[0_4px_20px_rgba(124,58,237,0.3)]"
             onClick={() => setMobileOpen(false)}
           >
             Launch App

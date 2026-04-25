@@ -32,17 +32,17 @@ export default function Hero() {
       {/* HUD Badge */}
       <div className="mb-14 hud-badge relative z-10">
         <div className="w-2 h-2 rounded-full dot-green animate-pulse-dot" />
-        <span className="text-[10px] uppercase font-bold tracking-[0.35em] text-white/30 whitespace-nowrap">
+        <span className="text-[10px] uppercase font-bold tracking-[0.35em] text-text-secondary whitespace-nowrap">
           Mainnet Operational // Bitcoin Settlement Active
         </span>
       </div>
 
       {/* Headline + Sub-headline + CTAs */}
       <div className="max-w-[1200px] text-center space-y-12 relative z-10">
-        <h1 className="hero-headline">
-          The <span className="neon-text-magenta">Settlement</span>
+        <h1 className="hero-headline text-text-primary">
+          The <span className="neon-text-purple">Settlement</span>
           <br />
-          <span className="text-white/90">Layer</span> For
+          <span className="text-text-primary/90">Layer</span> For
           <br />
           Gasless DeFi
         </h1>
